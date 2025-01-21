@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <!-- displays site properly based on user's device -->
 
     <link
@@ -10,8 +10,8 @@
       type="image/png"
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="style.css" />
+    >
+    <link rel="stylesheet" href="style.css" >
     <script src="script.js" defer></script>
 
     <title>
@@ -19,62 +19,76 @@
     </title>
   </head>
   <body>
-    <main id="sign-up" class="hidden">
+    <main>
       <!-- Sign-up form start -->
-      <img
-        src="./assets/images/illustration-sign-up-mobile.svg"
-        alt="an illustration of a tablet and a web page"
-        srcset="
-          ./assets/images/illustration-sign-up-mobile.svg 700w,
-          ./assets/images/illustration-sign-up-desktop.svg"
-      />
-      <article>
-        <header><strong>Stay updated!</strong></header>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul>
-          <li>
-            <span class="list-icon"></span>
-            <span>Product discovery and building what matters</span>
-          </li>
-          <li>
-            <span class="list-icon"></span
-            ><span>Measuring to ensure updates are a success</span>
-          </li>
-          <li><span class="list-icon"></span><span>And much more!</span></li>
-        </ul>
-        <form id="form" novalidate>
-          <div class="fields">
-            <div class="label-error">
-              <label for="email">Email address</label>
-              <span id="error-message"></span>
+      <div class="main" id="sign-up">
+        <picture>
+          <source
+            srcset="./assets/images/illustration-sign-up-desktop.svg"
+            media="(min-width: 701px)"
+          >
+          <source
+            srcset="./assets/images/illustration-sign-up-mobile.svg"
+            media="(max-width: 700px)"
+          >
+          <img
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            alt="an illustration of a tablet and a web page"
+          >
+        </picture>
+        <article>
+          <header><strong>Stay updated!</strong></header>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul>
+            <li>
+              <span class="list-icon"></span>
+              <span>Product discovery and building what matters</span>
+            </li>
+            <li>
+              <span class="list-icon"></span
+              ><span>Measuring to ensure updates are a success</span>
+            </li>
+            <li><span class="list-icon"></span><span>And much more!</span></li>
+          </ul>
+          <form id="form" novalidate>
+            <div class="fields">
+              <div class="label-error">
+                <label for="email">Email address</label>
+                <span id="error-message"></span>
+              </div>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="email@company.com"
+                autofocus
+              >
             </div>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="email@company.com"
-              autofocus
-            />
-          </div>
-          <button>Subscribe to monthly newsletter</button>
-        </form>
-      </article>
-    </main>
-    <!-- Sign-up form end -->
+            <button>Subscribe to monthly newsletter</button>
+          </form>
+        </article>
+      </div>
+      <!-- Sign-up form end -->
 
-    <!-- Success message start -->
-    <main id="success-message">
-      <img src="./assets/images/icon-list.svg" alt="a checkmark icon" width="60px" height="60px"/>
-      <article>
-        <header><strong>Thanks for subscribing!</strong></header>
-        <p>
-          A confirmation email has been sent to <span id="your-email"></span>.
-          Please open it and click the button inside to confirm your subscription.
-        </p>
-        <button id="dismiss-btn">Dismiss message</button>
-      </article>
+      <!-- Success message start -->
+      <div class="main" id="success-message">
+        <img
+          src="./assets/images/icon-success.svg"
+          alt="a checkmark icon"
+          width="64"
+          height="64"
+        >
+        <article>
+          <header><strong>Thanks for subscribing!</strong></header>
+          <p>
+            A confirmation email has been sent to <span id="your-email"></span>.
+            Please open it and click the button inside to confirm your
+            subscription.
+          </p>
+          <button id="dismiss-btn">Dismiss message</button>
+        </article>
+      </div>
+      <!-- Success message end -->
     </main>
-
-    <!-- Success message end -->
   </body>
 </html>

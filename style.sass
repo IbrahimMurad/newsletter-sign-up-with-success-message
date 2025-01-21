@@ -28,6 +28,7 @@ img
     max-inline-size: 100%
     block-size: auto
     object-fit: contain
+    width: 100%
 
 button
     background-color: var(--dark-slate-grey)
@@ -43,13 +44,13 @@ button
         cursor: pointer
 
 
-body
+main
     min-height: 100vh
     display: grid
     place-items: center
     background-color: var(--dark-slate-grey)
 
-    main
+    .main
         background-color: var(--white)
         width: 100%
         height: 100%
@@ -134,7 +135,7 @@ article
                 border: 1px solid var(--dark-slate-grey)
 
 
-.hidden
+.main.hidden
     display: none
 
 
@@ -143,6 +144,7 @@ article
     img
         margin-left: 2.5rem
         margin-top: 5rem
+        width: fit-content
     article
         padding: 2.5rem
         margin-top: 0
@@ -163,8 +165,8 @@ article
 
 @media (min-width: 700px)
 
-    body
-        main
+    main
+        .main
             flex-direction: row-reverse
             max-width: 960px
             min-width: 850px
@@ -173,7 +175,7 @@ article
             padding: 1rem
 
         img
-            width: 50%
+            width: 100%
 
         article
             padding: 3rem
